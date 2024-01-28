@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "285758854797",
+    "firebase_url": "https://sosalam-ce802.firebaseio.com",
+    "project_id": "sosalam-ce802",
+    "storage_bucket": "sosalam-ce802.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:285758854797:android:c45c9235baad34c981b4c4",
+        "android_client_info": {
+          "package_name": "alam.sos.sosalam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "285758854797-i3oa211t50s3buob8ibkjnsp6lqtl4ho.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "alam.sos.sosalam",
+            "certificate_hash": "c696c7cce611cd2123e32e60522f8a2379037ee3"
+          }
+        },
+        {
+          "client_id": "285758854797-ea3ffrpdvrgbp6fmos7ohmq6beloins3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqdEkQvevcMNax0vpku3Rb8F3sj-GObiA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "285758854797-ea3ffrpdvrgbp6fmos7ohmq6beloins3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

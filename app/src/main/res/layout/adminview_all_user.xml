@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:padding="4dp"
+                android:src="@drawable/user"/>
+
+            <TextView
+                android:id="@+id/usernameId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/imageView"
+                android:text="UserName"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+
+            <!--<ToggleButton-->
+            <!--android:id="@+id/useractiveunaviveId"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="30dp"-->
+            <!--android:layout_marginTop="40sp"-->
+            <!--android:layout_toRightOf="@id/userphoneID" />-->
+            <Switch
+                android:id="@+id/useractiveunaviveId"
+                android:layout_width="80sp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="40sp"
+                android:layout_toRightOf="@id/userphoneID"
+                android:checked="false"
+                android:textOff="OFF"
+                android:textOn="ON"/>
+            <CheckBox
+                android:id="@+id/checkBoxID"
+                android:visibility="gone"
+                android:layout_below="@+id/useractiveunaviveId"
+                android:layout_width="130sp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5sp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+            <TextView
+                android:id="@+id/desigId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/usernameId"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/imageView"
+                android:text="Designation"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+            <TextView
+                android:id="@+id/userphoneID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/desigId"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/imageView"
+                android:textColor="#000000"
+                android:paddingRight="15dp"
+                android:text="Phone No"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/whatsappId"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userphoneID"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/imageView"
+                android:textColor="#000000"
+                android:paddingRight="15dp"
+                android:text="Whatsapp No"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/flagId"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/whatsappId"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/imageView"
+                android:textColor="#000000"
+                android:paddingRight="15dp"
+                android:text="Flage"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/useId"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/flagId"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/imageView"
+                android:textColor="#000000"
+                android:paddingRight="15dp"
+                android:text="Uset ID"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/imei1"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/useId"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/imageView"
+                android:textColor="#000000"
+                android:paddingRight="15dp"
+                android:text="Emei1"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/imei2"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imei1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/imageView"
+                android:textColor="#000000"
+                android:paddingRight="15dp"
+                android:text="Emei1"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

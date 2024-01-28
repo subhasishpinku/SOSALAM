@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/imageId"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/user" />
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="16dp"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:layout_toRightOf="@+id/imageId"
+        tools:text="Avengers" />
+
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:paddingEnd="16dp"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:layout_toRightOf="@+id/imageId"
+        android:layout_below="@+id/textTitle"
+        tools:text="25-04-2019" />
+
+    <TextView
+        android:id="@+id/textTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:paddingEnd="16dp"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:layout_toRightOf="@+id/imageId"
+        android:layout_below="@+id/textDate"
+        tools:text="Time" />
+
+</RelativeLayout>

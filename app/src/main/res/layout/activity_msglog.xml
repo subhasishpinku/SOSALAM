@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimaryDark"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark"
+            tools:ignore="RtlCompat"
+            android:minHeight="@dimen/abc_action_bar_default_height_material">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:layout_gravity="end"
+                android:src="@mipmap/logo" />
+        </androidx.appcompat.widget.Toolbar>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/lv"
+        android:orientation="horizontal"
+        android:layout_marginTop="5sp"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bordertext">
+        <TextView
+            android:id="@+id/txt_tgl"
+            android:layout_width="match_parent"
+            android:text="Select Date"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+        </TextView>
+        <Button
+            android:id="@+id/cal"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="30sp"
+            android:background="@drawable/ic_date_range_black_24dp"/>
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/adsRecyclerView"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"/>
+</RelativeLayout>

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e2e2e2">
+    <LinearLayout
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimaryDark"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark"
+            tools:ignore="RtlCompat"
+            android:minHeight="@dimen/abc_action_bar_default_height_material">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:layout_gravity="end"
+                android:src="@mipmap/logo" />
+        </androidx.appcompat.widget.Toolbar>
+    </LinearLayout>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/lvv"
+        android:layout_below="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textview_marquee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SOS EMPOLOYEE APPLICATION CITY ALO"
+            android:textSize="25sp"
+            android:textColor="#133260"
+            android:background="#f4c2defd"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:ellipsize = "marquee"
+            android:fadingEdge = "horizontal"
+            android:marqueeRepeatLimit = "marquee_forever"
+            android:scrollHorizontally = "true"
+            />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lvv"
+        android:id="@+id/scId"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_marginTop="25sp"
+                android:id="@+id/lvv2"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="15sp"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="5">
+                <androidx.cardview.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/desID"
+                    android:layout_width="107dp"
+                    android:layout_height="160dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="2.50"
+                    card_view:cardCornerRadius="4dp"
+                    app:cardBackgroundColor="#f4c2defd">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="49dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="15sp"
+                        android:background="@mipmap/desg" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="100sp"
+                        android:gravity="center"
+                        android:text="DESIGNATION MASTER"
+                        android:textColor="#133260"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="    "/>
+
+                <androidx.cardview.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/alertID"
+                    android:layout_width="107dp"
+                    android:layout_height="160dp"
+                    android:layout_weight="2.50"
+                    android:layout_gravity="right"
+                    card_view:cardCornerRadius="4dp"
+                    app:cardBackgroundColor="#f4c2defd">
+                    <ImageView
+                        android:layout_marginBottom="15sp"
+                        android:layout_gravity="center"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@mipmap/bell"
+                        />
+                    <TextView
+                        android:layout_marginTop="100sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="#133260"
+                        android:text="CREATE ALERT"/>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lvv3"
+                android:layout_marginTop="20sp"
+                android:layout_below="@+id/lvv2"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="15sp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5"
+                >
+                <androidx.cardview.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/msgID"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_weight="2.50"
+                    android:layout_gravity="right"
+                    card_view:cardCornerRadius="4dp"
+                    app:cardBackgroundColor="#f4c2defd">
+                    <ImageView
+                        android:layout_marginBottom="15sp"
+                        android:layout_gravity="center"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@mipmap/msg"
+                        />
+                    <TextView
+                        android:layout_marginTop="100sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="#133260"
+                        android:text="MSG LOG"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="    "/>
+
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lvv4"
+                android:layout_marginTop="20sp"
+                android:layout_below="@+id/lvv3"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="15sp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+                <androidx.cardview.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/imgID"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_weight="2.50"
+                    android:layout_gravity="center"
+                    card_view:cardCornerRadius="4dp"
+                    app:cardBackgroundColor="#f4c2defd">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="42dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="15sp"
+                        android:background="@mipmap/profile" />
+                    <TextView
+                        android:layout_marginTop="100sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="#133260"
+                        android:text="VIST USER"/>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lvv5"
+                android:visibility="gone"
+                android:layout_marginTop="20sp"
+                android:layout_below="@+id/lvv4"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="15sp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+                <androidx.cardview.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/empID"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_weight="2.50"
+                    android:layout_gravity="right"
+                    card_view:cardCornerRadius="4dp"
+                    app:cardBackgroundColor="#f4c2defd">
+
+                    <ImageView
+                        android:layout_marginBottom="15sp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@mipmap/resign" />
+                    <TextView
+                        android:layout_marginTop="100sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="#133260"
+                        android:text="EMPLOYEE MASTER"/>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lvv6"
+                android:visibility="gone"
+                android:layout_marginTop="20sp"
+                android:layout_below="@+id/lvv5"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="15sp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+                <androidx.cardview.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/imeiID"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_weight="2.50"
+                    android:layout_gravity="center"
+                    card_view:cardCornerRadius="4dp"
+                    app:cardBackgroundColor="#f4c2defd">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="42dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="15sp"
+                        android:background="@mipmap/imei" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="100sp"
+                        android:gravity="center"
+                        android:text="IMEI NUMBER SHOW"
+                        android:textColor="#133260"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

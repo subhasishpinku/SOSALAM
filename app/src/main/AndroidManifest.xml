@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="alam.sos.sosalam">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>.
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application
+        android:name=".App"
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/soslogo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/soslogo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".HomeActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DesignationActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".EmpActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ImeiInstallerActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MsgLogActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ImeinumberActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".CreatealertActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ShowAlamActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".UserListActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait"/>
+        <receiver android:name=".AlamActivity.MyBroadcastReceiver" >
+        </receiver>
+        <receiver android:name=".AlamActivity.AutoStart">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name=".AlamActivity.YourService"
+            android:enabled="true"
+            android:process=":your_service" >
+        </service>
+        <receiver
+            android:name=".JobSedulerActivity.YourServiceRestarterBroadcastReceiver"
+            android:enabled="true"
+            android:label="RestartServiceWhenStopped">
+        </receiver>
+        <receiver android:name=".AlamActivity.AlarmReceiver" />
+        <!--        <service android:name=".AlamActivity.AlarmNotificationService" />-->
+        <service android:name=".AlamActivity.AlarmSoundService"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service
+            android:name=".JobSedulerActivity.MyJobIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <receiver android:name=".JobSedulerActivity.BootCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <category android:name="android.intent.category.DEFAULT"
+                    android:enabled="true"
+                    android:label="RestartServiceWhenStopped"/>
+            </intent-filter>
+        </receiver>
+        <service android:name=".MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
